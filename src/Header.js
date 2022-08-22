@@ -30,6 +30,13 @@ function Header() {
         <HeaderOptions Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOptions Icon={MessageRoundedIcon} title="Messaging" />
         <HeaderOptions Icon={NotificationsIcon} title="Notifications" />
+        FIXME:
+        <HeaderOptions
+          className="nav__avatar"
+          avatar={
+            "https://media-exp1.licdn.com/dms/image/C5103AQF-dQROPJVmVA/profile-displayphoto-shrink_800_800/0/1558705317606?e=1666828800&v=beta&t=KkBybB8Nv38OIefQwztEQjks5jkbSS9rgTxZo61MeD0"
+          }
+        />
       </section>
     </nav>
   );
