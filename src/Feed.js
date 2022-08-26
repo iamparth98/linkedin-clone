@@ -1,6 +1,8 @@
 import React from "react";
 import "./Feed.css";
+import Post from "./Post";
 import InputOption from "./InputOption";
+
 import CreateIcon from "@mui/icons-material/Create";
 import ImageIcon from "@mui/icons-material/Image";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
@@ -30,6 +32,13 @@ function Feed() {
           />
         </section>
       </section>
+
+      {/* Posts */}
+      <Post
+        name="Parth Tiwari"
+        message="This is a test"
+        description="wow this works"
+      />
     </section>
   );
 }

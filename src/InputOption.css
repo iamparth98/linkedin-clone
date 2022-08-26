@@ -14,3 +14,8 @@
 .input__option > h4 {
   margin-left: 5px;
 }
+
+.post__buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
