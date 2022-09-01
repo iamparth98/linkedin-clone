@@ -21,7 +21,7 @@ function Header() {
         />
         <section className="nav__search">
           <SearchIcon />
-          <input type="text" name="" id="" />
+          <input placeholder="Search" type="text" name="" id="" />
         </section>
       </section>
       <section className="nav__right">
