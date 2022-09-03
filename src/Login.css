@@ -35,4 +35,10 @@
   color: white;
   background-color: #0074b1;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.login__register {
+  color: #0074b1;
+  cursor: pointer;
 }
