@@ -13,6 +13,20 @@ function Login() {
 
   const loginToApp = (e) => {
     e.preventDefault();
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        dispatch(
+          login({
+            email: userAuth.email,
+            photoURL: userAuth.photoURL,
+            uid: userAuth.uid,
+            displayName: userAuth.displayName,
+          })
+        );
+      })
+      .catch((error) => alert(error));
   };
   const register = () => {
     if (!name) {

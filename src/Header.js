@@ -7,8 +7,17 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MessageRoundedIcon from "@mui/icons-material/MessageRounded";
 import "./Header.css";
 import HeaderOptions from "./HeaderOptions";
+import { logout } from "./features/counter/userSlice";
+import { useDispatch } from "react-redux";
+import { auth } from "./firebase";
 
 function Header() {
+  const dispatch = useDispatch();
+  const logOutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
+
   return (
     <nav className="nav">
       <section className="nav__left">
@@ -32,10 +41,10 @@ function Header() {
         <HeaderOptions Icon={NotificationsIcon} title="Notifications" />
         FIXME:
         <HeaderOptions
-          className="nav__avatar"
-          avatar={
-            "https://media-exp1.licdn.com/dms/image/C5103AQF-dQROPJVmVA/profile-displayphoto-shrink_800_800/0/1558705317606?e=1666828800&v=beta&t=KkBybB8Nv38OIefQwztEQjks5jkbSS9rgTxZo61MeD0"
-          }
+          onClick={logOutOfApp}
+          // className="nav__avatar"
+          avatar={true}
+          title="Me"
         />
       </section>
     </nav>

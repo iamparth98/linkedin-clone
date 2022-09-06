@@ -1,8 +1,13 @@
 import { Avatar } from "@mui/material";
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/counter/userSlice";
 import "./Sidebar.css";
 
 function Sidebar() {
+  const user = useSelector(selectUser);
+  // const firstLetter = user.email[0].toString();
+
   const recentItem = (item) => (
     <section className="sidebar__recentItem">
       <span className="sidebar__hash">#</span>
@@ -17,9 +22,11 @@ function Sidebar() {
           src="https://images.freeimages.com/images/large-previews/01a/technology-background-1632715.jpg"
           alt=""
         />
-        <Avatar className="sidebar__top__avatar" />
-        <h2>Parth Tiwari</h2>
-        <h4>parthtiwari98@gmail.com</h4>
+        <Avatar src={user.photoURL} className="sidebar__top__avatar">
+          {user.displayName[0]}
+        </Avatar>
+        <h2>{user.displayName}</h2>
+        <h4>{user.email}</h4>
       </section>
 
       <section className="sidebar__stats">
